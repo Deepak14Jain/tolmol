@@ -45,7 +45,7 @@ function ParallaxItem({ item, scrollY }: any) {
     // Direct Mapping: For every 1px user scrolls, move this item by 'speed' pixels
     // [0, 1000] scroll pixels -> [0, 1000 * speed] movement
     // The negative sign (-) makes items move UP when you scroll DOWN (classic parallax)
-    const y = useTransform(scrollY, (value) => value * -item.parallaxSpeed);
+    const y = useTransform(scrollY, (value: number) => value * -item.parallaxSpeed);
 
     return (
         <motion.div
